@@ -39,6 +39,7 @@ if uploaded_file is not None:
     destination_blob_name = f"images/{file_name}"
 
     # Google Cloud Storage에 업로드
+    save_image_service = "your-bucket-name"  # 올바른 버킷 이름을 설정
     public_url = upload_to_gcs(save_image_serviece, uploaded_file, destination_blob_name)
     
     # 업로드 성공 메시지와 이미지 URL 표시
